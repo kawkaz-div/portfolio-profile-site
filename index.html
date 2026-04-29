@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <h1>Kawae Kazfumi(カワエカズフミ)</h1>
+        <h1>Kawae Kazufumi(カワエカズフミ)</h1>
         <nav>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -20,7 +20,16 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Javaエンジニア目指して日々奮闘中</p>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/profile.png" alt="プロフィール画像" class="profile-img">
+            </div>
+
+            <div class="about-text">
+                <p>Javaエンジニアを目指して日々学習しています。React を使ったフロント開発や、Spring Boot
+                    を用いたバックエンド開発にも取り組んでいます。将来的にはフルスタックエンジニアとして活躍できるよう、継続してスキルを磨いています。</p>
+            </div>
+        </div>
     </section>
 
     <section id="skills">
@@ -38,12 +47,17 @@
             <li>Oracle認定Javaﾌﾟﾛｸﾞﾗﾏｰ Bronze</li>
             <li>Oracle認定Javaﾌﾟﾛｸﾞﾗﾏｰ Silver（Java SE 17）</li>
             <li>ITパスポート</li>
-            </dl>
+        </ul>
     </section>
 
     <section id="works">
         <h2>Works</h2>
-        <p>自己紹介サイト</p>
+        <ul>
+            <li>自己紹介サイト（本サイト）</li>
+            <li>React 天気予報アプリ（制作予定）</li>
+            <li>Spring Boot ＋ React 認証付きタスク管理アプリ（制作予定）</li>
+            <li>フルスタックアプリ（Docker構築・本番デプロイ）（制作予定）</li>
+        </ul>
     </section>
 
     <section id="contact">
@@ -52,6 +66,7 @@
     </section>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

@@ -1,37 +1,119 @@
+/* 全体の基本設定 */
 body {
-    font-family: sans-serif;
+    font-family: "Helvetica", "Arial", sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    background: #f7f7f7;
+    color: #333;
 }
 
+/* ヘッダー */
 header {
-    background: #333;
+    background: #222;
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+/* ナビゲーション */
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* セクション共通 */
 section {
-    padding: 20px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
 h2 {
-    border-bottom: 2px solid #333;
-    display: inline-block;
-    padding-bottom: 5px;
+    border-left: 5px solid #00bcd4;
+    padding-left: 10px;
     margin-bottom: 20px;
 }
 
+/* Skills のリスト */
 ul {
     list-style: none;
     padding: 0;
 }
 
-li {
-    margin-bottom: 10px;
+ul li {
+    background: #fff;
+    margin: 8px 0;
+    padding: 10px 15px;
+    border-radius: 2px;
 }
 
-nav a {
-    color: #fff;
-    margin-right: 15px;
+/* Contact */
+#contact a {
+    color: #00bcd4;
+    font-weight: bold;
     text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* About セクションの横並びレイアウト */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* 画像 */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* テキスト部分 */
+.about-text {
+    flex: 1;
+}
+
+/* リンククリック時、セクション先頭（見出し）から表示 */
+section {
+    scroll-margin-top: 180px;
+    /* ヘッダーの高さに合わせて調整 */
+}
+
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
